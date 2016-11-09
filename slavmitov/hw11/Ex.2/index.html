@@ -4,8 +4,12 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The square task</title>
 	<style>
+		* {
+			box-sizing: border-box;
+		}
 		body {
 			font-family: sans-serif;
 		}
@@ -36,6 +40,7 @@
 		
 		@media only screen and (max-width: 399px) {
 			.square {
+				width: 100%;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -160,13 +165,18 @@
 		/* > 800 */
 		
 		@media only screen and (min-width: 800px) {
+			body {
+				display: flex;
+			}
 			p {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 			.square {
-				display: inline-block;
+				width: 100%;
+				display: inline-flex;
+				justify-content: center;
 			}
 		}
 	</style>
